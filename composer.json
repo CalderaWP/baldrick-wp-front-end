@@ -21,7 +21,7 @@
   },
   "homepage" : "http://calderawp.com",
   "autoload": {
-    "psr-4": {"calderawp\\baldrick_wp_front_end": "php/"},
+    "psr-4": {"calderawp\\baldrick_wp_front_end\\": "php/"},
     "files"   : ["php/functions.php"]
   }
 }
