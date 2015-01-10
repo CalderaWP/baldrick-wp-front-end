@@ -22,13 +22,13 @@ module.exports = function( grunt ) {
 			},
 			js: {
 				src: [
-					'assets/js/src/baldrick_wp_front_end.js',
+					'vendor/baldrickjs/src/jquery.baldrick.js',
 					'vendor/baldrickjs/libs/handlebars.js',
 					'vendor/baldrickjs/plugins/animate.baldrick.js',
 					'vendor/baldrickjs/plugins/handlebars.baldrick.js',
 					'vendor/baldrickjs/plugins/modal.baldrick.js',
-					'vendor/baldrickjs/src/jquery.baldrick.js',
-					'vendor/baldrickjs/plugins/preload.baldrick.js'
+					'vendor/baldrickjs/plugins/preload.baldrick.js',
+					'assets/js/src/baldrick_wp_front_end.js'
 				],
 				dest: 'assets/js/baldrick_wp_front_end.js'
 			},

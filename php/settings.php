@@ -23,7 +23,7 @@ class settings {
 	 *
 	 * @var string
 	 */
-	public static $baldrick_class = 'baldrick_wp_front_end';
+	public static $baldrick_class = 'wp-baldrick';
 
 	/**
 	 * Default HTTP method to use
