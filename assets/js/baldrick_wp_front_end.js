@@ -1,4 +1,4 @@
-/*! WordPress Baldrick Front-end - v0.1.0 - 2015-01-09
+/*! WordPress Baldrick Front-end - v0.1.0 - 2015-01-11
  * http://CalderaWP.com
  * Copyright (c) 2015; * Licensed GPLv2+ */
 (function($){
@@ -3192,7 +3192,7 @@ Handlebars.template = Handlebars.VM.template;
 	'use strict';
 
     // initialise baldrick triggers
-    jQuery('.'+baldrick_wp_front_end.className).baldrick({
+    jQuery( '.'+baldrick_wp_front_end.className ).baldrick({
      request     : baldrick_wp_front_end.ajaxURL,
      method      : baldrick_wp_front_end.transportMethod
     });

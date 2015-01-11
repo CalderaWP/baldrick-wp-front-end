@@ -22,9 +22,10 @@ class assets {
 	 * Enqueue Baldrick
 	 */
 	public static function enqueue() {
+		wp_enqueue_script( 'baldrick_wp_front_end', self::url_path() . 'assets/js/baldrick_wp_front_end.min.js', array( 'jquery' ), false, true );
 
-		wp_enqueue_script( 'baldrick_wp_front_end', self::url_path() . 'assets/js/baldrick_wp_front_end.min.js', array( 'jquery'), false, true );
 		wp_localize_script( 'baldrick_wp_front_end', 'baldrick_wp_front_end', self::js_var() );
+
 		wp_enqueue_style( 'baldrick_wp_front_end', self::url_path(). 'assets/css/baldrick_wp_front_end.min.css' );
 
 	}
