@@ -116,6 +116,8 @@ module.exports = function( grunt ) {
 	// Default task.
 	
 	grunt.registerTask( 'default', [ 'concat', 'uglify', 'cssmin'] );
+
+	grunt.registerTask( 'update', [ 'gitclone', 'concat', 'uglify', 'cssmin'] );
 	
 
 	grunt.util.linefeed = '\n';

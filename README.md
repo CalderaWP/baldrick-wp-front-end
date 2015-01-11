@@ -4,7 +4,10 @@ Tools for using the [BaldrickJS](https://github.com/Desertsnowman/BaldrickJS) AJ
 ### Installation
 * Add this to your composer dependencies and do `composer update`
 * `npm install`
-* `grunt`
+* `grunt update`
+
+### `grunt` vs `grunt update`
+The default grunt task, run using `grunt` will concact and minify JS and CSS. The `grunt update` task will clone the BaldrickJS repo from Github and then create the concact and minify JS and CSS. Failing to run `grunt update` on initial install will result in missing essential parts of the code in the JS and CSS files, nothing will work and you will be upset.
 
 ### Usage
 @todo
