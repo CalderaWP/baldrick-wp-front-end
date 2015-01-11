@@ -30,6 +30,7 @@ class modal {
 	 */
 	public static function make( $action, $atts = false, $text, $api = false ) {
 		$atts[ 'data-modal' ] = 'true';
+
 		$modal = html::element( $action, $atts, $text, $api );
 
 		return $modal;

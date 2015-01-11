@@ -32,8 +32,13 @@ class html {
 
 		$atts[ 'class' ] = settings::$baldrick_class;
 		$atts[ 'data-action' ] = $action;
-		if ( ! $api ) {
-			$atts['data-request'] = settings::default_api();
+
+		if ( ! isset( $atts[ 'data-request' ] ) ) {
+			if( $api && filter_var( $api, FILTER_VALIDATE_URL ) ) {
+				$atts[ 'data-request' ] = $api;
+			}else{
+				$atts[ 'date-request' ] = settings::default_api();
+			}
 		}
 
 		foreach( $atts as $att => $value ) {
