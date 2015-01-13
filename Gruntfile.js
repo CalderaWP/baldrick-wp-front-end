@@ -28,7 +28,8 @@ module.exports = function( grunt ) {
 					'vendor/baldrickjs/plugins/handlebars.baldrick.js',
 					'vendor/baldrickjs/plugins/modal.baldrick.js',
 					'vendor/baldrickjs/plugins/preload.baldrick.js',
-					'assets/js/src/baldrick_wp_front_end.js'
+					'assets/js/src/baldrick_wp_front_end.js',
+					'assets/js/src/helpers.js'
 				],
 				dest: 'assets/js/baldrick_wp_front_end.js'
 			},

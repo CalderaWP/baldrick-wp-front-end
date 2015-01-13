@@ -1,4 +1,4 @@
-/*! WordPress Baldrick Front-end - v0.1.0 - 2015-01-11
+/*! WordPress Baldrick Front-end - v0.1.0 - 2015-01-12
  * http://CalderaWP.com
  * Copyright (c) 2015; * Licensed GPLv2+ */
 (function($){
@@ -3191,10 +3191,38 @@ Handlebars.template = Handlebars.VM.template;
 ( function( window, undefined ) {
 	'use strict';
 
-    // initialise baldrick triggers
+     /**
+      * Initialize Baldrick Triggers
+      */
     jQuery( '.'+baldrick_wp_front_end.className ).baldrick({
      request     : baldrick_wp_front_end.ajaxURL,
      method      : baldrick_wp_front_end.transportMethod
     });
 
  } )( this );
+
+/**
+ * HTML Element For Opening a Modal
+ */
+Handlebars.registerHelper( 'wp_baldrick_modal',
+    function( action, trigger, extra_class, add_arg_type, add_arg_value, text   ){
+        api = baldrick_wp_front_end.ajaxURL;
+
+        if ( undefined == trigger ) {
+            trigger = 'click'
+        }
+
+        var add_arg_out ='';
+        if ( undefined !== add_arg_type && undefined !== add_arg_value ) {
+            add_arg_out = add_arg_type + '="'+add_arg_value+'"';
+
+        }
+
+
+        var str = '<a class="'+baldrick_wp_front_end.className+' ' +extra_class +'" data-request="'+api+'" data-action="'+action+'" data-modal="true" data-trigger="'+trigger+'" '+add_arg_out+' >'+text+'</a>';
+        return new Handlebars.SafeString( str );
+
+});
+
+
+

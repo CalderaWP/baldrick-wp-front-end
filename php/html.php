@@ -43,9 +43,6 @@ class html {
 
 		$att_out = array();
 		foreach( $atts as $att => $value ) {
-			if ( 'class' == $att || 'data-' ) {
-				continue;
-			}
 
 			if ( 0 !== strpos( $att, 'data-' ) )  {
 				if ( self::allow_without_data_prefix( $att ) ) {
@@ -64,7 +61,7 @@ class html {
 		 *
 		 * @param array $att_out The array of attributes that will be used to build the HTML element
 		 * @param string $action Current action being run.
-		 * @param array $atts The attributes passed to methdod, before validation.
+		 * @param array $atts The attributes passed to method, before validation.
 		 */
 		$filter_atts = apply_filters( 'baldrick_wp_front_end_html_attributes', $att_out, $action, $atts );
 
