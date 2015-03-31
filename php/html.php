@@ -37,7 +37,7 @@ class html {
 			if( $api && filter_var( $api, FILTER_VALIDATE_URL ) ) {
 				$atts[ 'data-request' ] = $api;
 			}else{
-				$atts[ 'date-request' ] = settings::default_api();
+				$atts[ 'data-request' ] = settings::default_api();
 			}
 		}
 
